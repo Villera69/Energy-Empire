@@ -1,4 +1,21 @@
-.lvl1MH{
-    display: grid;
-    grid-template-columns: 1fr, 1fr, 1fr;
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.BoltContainer
+{
+display: flex;
+background-color: #404042;
+height: 175px;
+align-items: center;
+}
+
+
+.ClickTarget
+{
+    margin-left: 25px;
+    width: 150px;
 }
