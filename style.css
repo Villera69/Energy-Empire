@@ -18,4 +18,35 @@ align-items: center;
 {
     margin-left: 25px;
     width: 150px;
+
+}
+
+.Scale 
+{
+    transform: scale(1.1, 1.1);
+}
+
+.shop{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-size: 21px;
+
+}
+
+ul{
+
+    list-style: none;
+}
+
+.EnergyTotal{
+    font-size: 21px;
+}
+
+.EnergyPerSec{
+    font-size: 21px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
