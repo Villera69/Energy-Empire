@@ -82,17 +82,17 @@ function BuyButtonPressed(event){
 
         case "SP":
             console.log(event.target.id);
-            if(energy >= 25)
+            if(energy >= 250)
             {
-                energy -= 25;
+                energy -= 250;
                 SolarPanels += 1;
 
             }
             break;
         case "NPP":
-            if(energy >= 25)
+            if(energy >= 2500)
             {
-                energy -= 25;
+                energy -= 2500;
                 NuclearPowerPlants += 1;
 
             }
