@@ -31,9 +31,9 @@ UpdatePerSec();
 function UpdatePerSec()
 {
 
-    energy += TotalEnergyPerSecond;
+    energy += TotalEnergyPerSecond/60;
     updateStats();
-    setTimeout(UpdatePerSec, 1000);
+    setTimeout(UpdatePerSec, 1000/60);
 
 }
 
