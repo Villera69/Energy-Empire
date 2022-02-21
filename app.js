@@ -7,7 +7,7 @@ let NuclearPowerPlants = 0;
 let FusionPowerPlants = 0;
 let DysonSpheres = 0;
 let TotalEnergyPerSecond = 0;
-let energySuffix = "⚡";
+let energySuffix = " ⚡";
 
 
 
@@ -26,6 +26,7 @@ const BuyButton = document.querySelectorAll("button").forEach(BuyButton => {
 
 updateStats();
 UpdatePerSec();
+
 
 //The best way i could do it lol
 function UpdatePerSec()
@@ -128,7 +129,17 @@ function BuyButtonPressed(event){
 
 function updateStats(){
 
-    EnergyTotal.innerHTML = energy.toFixed(0) + " ⚡";    
+    if(energy > 1000)
+    {
+        energySuffix = "K⚡"; 
+
+    }
+    else if(energy > 1000000)
+    {
+        energySuffix = "M⚡";
+    }
+
+    EnergyTotal.innerHTML = energy.toFixed(0) + energySuffix;    
     TotalEnergyPerSecond = HamsterWheels*0.10 + Cyclists*0.30 + WindGenerators*0.70 + SolarPanels*1.00 + NuclearPowerPlants*10.00 + FusionPowerPlants*50.00 + DysonSpheres*1000;
     EnergyPerSecond.innerHTML = TotalEnergyPerSecond.toFixed(1) + " ⚡/s";
 
