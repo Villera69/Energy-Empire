@@ -5,10 +5,11 @@ let WindGenerators = 0;
 let SolarPanels = 0;
 let NuclearPowerPlants = 0;
 let FusionPowerPlants = 0;
+let DysonSpheres = 0;
+let TotalEnergyPerSecond = 0;
 let energySuffix = "⚡";
 
 
-let TotalEnergyPerSecond = 0;
 
 const EnergyTotal = document.querySelector(".EnergyTotal")
 const Inventory = document.querySelector(".Inventory")
@@ -63,7 +64,6 @@ function BuyButtonPressed(event){
             break;
 
         case "C":
-            console.log(event.target.id);
             if(energy >= 75)
             {
                 energy -= 75;
@@ -81,7 +81,6 @@ function BuyButtonPressed(event){
             break;
 
         case "SP":
-            console.log(event.target.id);
             if(energy >= 250)
             {
                 energy -= 250;
@@ -98,11 +97,18 @@ function BuyButtonPressed(event){
             }
             break;
         case "FPP":
-            console.log(event.target.id);
             if(energy >= 12500)
             {
                 energy -= 12500;
                 FusionPowerPlants += 1;
+
+            }
+            break;
+        case "DS":
+            if(energy >= 250000)
+            {
+                energy -= 250000;
+                DysonSpheres += 1;
 
             }
             break;
@@ -123,7 +129,7 @@ function BuyButtonPressed(event){
 function updateStats(){
 
     EnergyTotal.innerHTML = energy.toFixed(0) + " ⚡";    
-    TotalEnergyPerSecond = HamsterWheels*0.10 + Cyclists*0.30 + WindGenerators*0.70 + SolarPanels*1.00 + NuclearPowerPlants*10.00 + FusionPowerPlants*50.00;
+    TotalEnergyPerSecond = HamsterWheels*0.10 + Cyclists*0.30 + WindGenerators*0.70 + SolarPanels*1.00 + NuclearPowerPlants*10.00 + FusionPowerPlants*50.00 + DysonSpheres*1000;
     EnergyPerSecond.innerHTML = TotalEnergyPerSecond.toFixed(1) + " ⚡/s";
 
 }
