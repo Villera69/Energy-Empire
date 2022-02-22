@@ -40,7 +40,7 @@ function UpdatePerSec()
 
 
 function ClickEnergy(event) {
-    energy += 10000000;
+    energy += 1;
     ClickTarget.classList.add('Scale');
     updateStats();
     setTimeout(()=>{ClickTarget.classList.remove('Scale')}, 50)
