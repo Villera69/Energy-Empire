@@ -40,7 +40,7 @@ function UpdatePerSec()
 
 
 function ClickEnergy(event) {
-    energy += 1;
+    energy += 10000000;
     ClickTarget.classList.add('Scale');
     updateStats();
     setTimeout(()=>{ClickTarget.classList.remove('Scale')}, 50)
@@ -135,9 +135,13 @@ function updateStats(){
     
     EnergyTotal.innerHTML = energy.toFixed(0) + energySuffix;    
     TotalEnergyPerSecond = HamsterWheels*0.1 + Cyclists*0.3 + WindGenerators*0.7 + SolarPanels*1.00 + NuclearPowerPlants*10.00 + FusionPowerPlants*50.00 + DysonSpheres*1000;
-    EnergyPerSecond.innerHTML = TotalEnergyPerSecond.toFixed(1) + " /s";
+    EnergyPerSecond.innerHTML = TotalEnergyPerSecond.toFixed(1) + " ⚡/s";
 
 }
 
+
+//Idéer
+//+1 runt bolten
+//
 
 
