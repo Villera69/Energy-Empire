@@ -1,7 +1,29 @@
 *{
-
+    
     margin: 0;
     padding: 0;
+    
+}
+
+.stats
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+.CC
+{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+place-items: center;
+padding-bottom: 10px;
+padding-top: 10px;
+background: radial-gradient(#DBB871, #192A40);
+
 
 }
 
@@ -9,16 +31,21 @@
 {
 display: flex;
 background-color: #404042;
-height: 175px;
 align-items: center;
+justify-content: center;
+height: 25vw;
+width: 25vw;
+border-radius: 50%;
+
 }
 
 
 .ClickTarget
 {
-    margin-left: 25px;
-    width: 150px;
-
+    width: 15vw;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
 }
 
 .Scale 
@@ -26,27 +53,54 @@ align-items: center;
     transform: scale(1.1, 1.1);
 }
 
+h3
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: calc(16px + 2vw);
+    text-align: center;
+
+}
 .shop{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    font-size: 21px;
+    place-items: center;
 
 }
 
 ul{
 
     list-style: none;
-}
-
-.EnergyTotal{
-    font-size: 21px;
-}
-
-.EnergyPerSec{
-    font-size: 21px;
-}
-
-.stats {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(7, 10vh);
+    font-size: calc(16px + 1vw);
+}
+
+.ShopBuyButtons button
+{
+    border-radius: 8px;
+    width: fit-content;
+    height: 50px;
+    padding: 2px;
+    text-align: center;
+    font-size: 21px;
+}
+
+.EnergyTotal
+{
+    font-size: calc(16px + 3vw);
+}
+
+.EnergyPerSec
+{
+    font-size: calc(16px + 3vw);
+}
+
+h2
+{
+    text-align: center;
+    font-size: calc(16px + 2vw);
+    background-color: #3F8183;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
