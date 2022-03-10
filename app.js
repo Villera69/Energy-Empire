@@ -8,11 +8,13 @@ let FusionPowerPlants = 0;
 let DysonSpheres = 0;
 let TotalEnergyPerSecond = 0;
 let energySuffix = " ⚡";
+let EnergyPerClick = 1;
 
 
 const EnergyTotal = document.querySelector(".EnergyTotal");
 const Inventory = document.querySelector(".Inventory");
 const EnergyPerSecond = document.querySelector(".EnergyPerSec");
+const EnergyClick = document.querySelector(".EnergyPerClick")
 
 const ClickTarget = document.querySelector(".ClickTarget");
 ClickTarget.addEventListener("click", ClickEnergy);
@@ -40,10 +42,10 @@ function UpdatePerSec()
 
 
 function ClickEnergy(event) {
-    energy += 1;
+    energy += EnergyPerClick;
     ClickTarget.classList.add('Scale');
     updateStats();
-    setTimeout(()=>{ClickTarget.classList.remove('Scale')}, 50)
+    setTimeout(()=>{ClickTarget.classList.remove('Scale')}, 50);
 }
 
 
@@ -54,6 +56,14 @@ function BuyButtonPressed(event){
 
     switch (event.target.id)
     {
+
+        case "PC":
+            if(energy >= 20)
+            {
+                energy -= 20;
+                EnergyPerClick += 0.1;
+            }
+            break;
         case "HW":
             if(energy >= 25)
             {
@@ -124,6 +134,7 @@ function updateStats(){
     EnergyTotal.innerHTML = energy.toFixed(0) + energySuffix;    
     TotalEnergyPerSecond = HamsterWheels*0.1 + Cyclists*0.3 + WindGenerators*0.7 + SolarPanels*1.00 + NuclearPowerPlants*10.00 + FusionPowerPlants*50.00 + DysonSpheres*1000;
     EnergyPerSecond.innerHTML = TotalEnergyPerSecond.toFixed(1) + " ⚡/s";
+    EnergyClick.innerHTML = EnergyPerClick.toFixed(1) + " ⚡/click";
 
 }
 
