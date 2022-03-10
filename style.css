@@ -17,6 +17,14 @@
     
 }
 
+.EnergyPer
+{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    font-size: calc(12px + 3vw);
+    place-items: center;
+}
+
 
 
 .CC
@@ -82,7 +90,7 @@ ul{
     list-style: none;
     display: grid;
     grid-template-rows: repeat(7, 10vh);
-    font-size: calc(16px + 1vw);
+    font-size: calc(12px + 1vw);
 }
 
 .ShopBuyButtons button
@@ -100,10 +108,6 @@ ul{
     font-size: calc(16px + 3vw);
 }
 
-.EnergyPerSec
-{
-    font-size: calc(16px + 3vw);
-}
 
 h2
 {

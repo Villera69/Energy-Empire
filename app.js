@@ -131,10 +131,10 @@ function BuyButtonPressed(event){
 
 function updateStats(){
     
-    EnergyTotal.innerHTML = energy.toFixed(0) + energySuffix;    
+    EnergyTotal.innerHTML = energy.toFixed(1) + energySuffix;    
     TotalEnergyPerSecond = HamsterWheels*0.1 + Cyclists*0.3 + WindGenerators*0.7 + SolarPanels*1.00 + NuclearPowerPlants*10.00 + FusionPowerPlants*50.00 + DysonSpheres*1000;
     EnergyPerSecond.innerHTML = TotalEnergyPerSecond.toFixed(1) + " ⚡/s";
-    EnergyClick.innerHTML = EnergyPerClick.toFixed(1) + " ⚡/click";
+    EnergyClick.innerHTML = EnergyPerClick.toFixed(1) + " ⚡/c";
 
 }
 
