@@ -100,7 +100,7 @@ ul{
     height: 50px;
     padding: 2px;
     text-align: center;
-    font-size: calc(8px + 1vw);
+    font-size: calc(6px + 1vw);
 }
 
 .EnergyTotal
