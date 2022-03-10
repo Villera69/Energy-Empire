@@ -1,4 +1,4 @@
- let energy = 0;
+let energy = 0;
 let HamsterWheels = 0;
 let Cyclists = 0;
 let WindGenerators = 0;
@@ -10,8 +10,8 @@ let TotalEnergyPerSecond = 0;
 let energySuffix = " ⚡";
 
 
-const EnergyTotal = document.querySelector(".EnergyTotal")
-const Inventory = document.querySelector(".Inventory")
+const EnergyTotal = document.querySelector(".EnergyTotal");
+const Inventory = document.querySelector(".Inventory");
 const EnergyPerSecond = document.querySelector(".EnergyPerSec");
 
 const ClickTarget = document.querySelector(".ClickTarget");
@@ -114,24 +114,12 @@ function BuyButtonPressed(event){
             break;
     
     }
-    
-
 
     updateStats();
 
 }
 
-
-
-
-
-
 function updateStats(){
-
-
-    
-
-
     
     EnergyTotal.innerHTML = energy.toFixed(0) + energySuffix;    
     TotalEnergyPerSecond = HamsterWheels*0.1 + Cyclists*0.3 + WindGenerators*0.7 + SolarPanels*1.00 + NuclearPowerPlants*10.00 + FusionPowerPlants*50.00 + DysonSpheres*1000;

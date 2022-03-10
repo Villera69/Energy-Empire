@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
 *{
     
     margin: 0;
     padding: 0;
+    border: 0;
+    font-family: 'Syne Mono', monospace;
     
 }
 
@@ -23,6 +27,7 @@ place-items: center;
 padding-bottom: 10px;
 padding-top: 10px;
 background: radial-gradient(#DBB871, #192A40);
+border: 5px solid black;
 
 
 }
@@ -55,12 +60,16 @@ border-radius: 50%;
 
 h3
 {
-    padding-top: 5px;
-    padding-bottom: 5px;
     font-size: calc(16px + 2vw);
     text-align: center;
-
+ 
 }
+
+.ShopAndTitle
+{
+    background-color: #809BB9;
+}
+
 .shop{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -83,7 +92,7 @@ ul{
     height: 50px;
     padding: 2px;
     text-align: center;
-    font-size: 21px;
+    font-size: calc(8px + 1vw);
 }
 
 .EnergyTotal
@@ -100,7 +109,7 @@ h2
 {
     text-align: center;
     font-size: calc(16px + 2vw);
-    background-color: #3F8183;
+    background-color: #809BB9;
     padding-top: 5px;
     padding-bottom: 5px;
 }
