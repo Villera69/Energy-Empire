@@ -19,9 +19,7 @@ const EnergyClick = document.querySelector(".EnergyPerClick")
 const ClickTarget = document.querySelector(".ClickTarget");
 ClickTarget.addEventListener("click", ClickEnergy);
 
-const BuyButton = document.querySelectorAll("button").forEach(BuyButton => {
-    BuyButton.addEventListener("click", BuyButtonPressed);    
-});
+const BuyButton = document.querySelectorAll("button").forEach(BuyButton => {BuyButton.addEventListener("click", BuyButtonPressed);});
 
 
 
